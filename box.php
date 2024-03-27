@@ -17,8 +17,13 @@ fclose($file);
     <div class="chat incoming">
         <img src="Assets/img/user2.png" alt="Profile Image">
         <div class="details">
-            <p><span><?=$chat[0] ?></span><br><?= $chat[1] ?><br><small style="font-size: 12px; color: #777;"><?= $chat[2] ?></small></p>
+            <p><span><?= isset($chat[0]) ? $chat[0] : '' ?></span><br>
+            <?= isset($chat[1]) ? $chat[1] : '' ?><br>
+            <small style="font-size: 12px; color: #777;">
+            <?= isset($chat[2]) ? $chat[2] : '' ?></small></p>
         </div>
     </div>
 <?php endforeach ?>
+
+
 
