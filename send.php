@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
@@ -9,10 +8,11 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 
 $pesan = $_POST["pesan"];
 $username = $_SESSION["username"];
+$tanggal = date("Y-m-d H:i:s");
 
 $file = fopen("data/chat.txt", "a");
 
-$data = "$username;$pesan\n";
+$data = "$username;$pesan;$tanggal\n";
 
 fwrite($file, $data);
 
@@ -20,6 +20,4 @@ fclose($file);
 
 header("Location: chat.php");
 exit();
-
 ?>
-
