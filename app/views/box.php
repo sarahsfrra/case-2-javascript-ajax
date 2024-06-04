@@ -7,7 +7,7 @@ foreach ($chats as $chat) :
     <div class="chat <?= $isCurrentUser ? 'outgoing' : 'incoming' ?>">
 
         <?php if (!$isCurrentUser) : ?>
-            <img src="Assets/img/user1.png" alt="Profile Image">
+            <img src="Assets/img/user2.png" alt="Profile Image">
         <?php endif; ?>
         <?php if ($isCurrentUser) : ?>
             <img src="Assets/img/user2.png" alt="Profile Image">
